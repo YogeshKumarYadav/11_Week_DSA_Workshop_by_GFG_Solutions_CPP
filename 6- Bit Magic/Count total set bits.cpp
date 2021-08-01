@@ -14,8 +14,10 @@ class Solution{
     int highbit (int n)
     {
         int i = 0;
-        while ((1 << i) <= n)
+        while (n) {
             i++;
+            n = n >> 1;
+        }
         
         return i-1;
     }
